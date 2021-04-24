@@ -4,14 +4,13 @@ import numpy as np
 from imutils.video import VideoStream
 from time import sleep
 
-cv.namedWindow('Images')
+#cv.namedWindow('Images')
 #cap = cv.VideoCapture(0)
 #cap.set(cv.CAP_PROP_BUFFERSIZE, 2)
 cap = VideoStream(src=0).start()
 sleep(2.0)
-cascPath = '/Users/legend/Downloads/haarcascade_frontalface_default.xml'
-def empty(a):
-	pass
+cascPath = 'haarcascade_frontalface_default.xml' # Path of the xml file 
+
 
 def detectFace(img, res):
 	x, y, w, h = 0, 0, 0, 0
