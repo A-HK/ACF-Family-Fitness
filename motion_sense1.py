@@ -11,7 +11,7 @@ def getContours(img, width):
 	
 	contour_l, _ = cv.findContours(img, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
 	
-	cv.drawContours(imgResult, contour_l, -1, (0, 0, 255), 3)
+	#cv.drawContours(imgResult, contour_l, -1, (0, 0, 255), 3)
 	
 	if len(contour_l) > 0:
 		contour = max(contour_l, key=lambda x: cv.contourArea(x))
