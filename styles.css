@@ -1,28 +1,84 @@
-body{
+body {
   font-family: 'Comfortaa';
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
-.heading{
+
+.mood-check {
+  position: absolute;
+  padding: 0 30px 30px 30px;
+  top: 70%;
+  left: 30%;
+  z-index: 2;
+  background-color: #6A359C;
+  color: white;
+}
+
+.mood-buttons {
+  font-family: inherit;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  margin-right: 10px;
+  margin-left: 60px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: black;
+  cursor: pointer;
+}
+
+.b1 {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  cursor: pointer;
+  background-color: #6A359C;
+  padding: 15px;
+  font-size: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.b2 {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  cursor: pointer;
+  background-color: #6A359C;
+  padding: 15px;
+  font-size: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.music-link {
+  text-decoration: none;
+}
+
+.heading {
   margin-left: 40%;
   margin-top: 2%;
   color: #6A359C;
   font-weight: 900;
   font-size: 40px;
 }
-.graph{
+
+.graph {
   margin-top: 20%;
   margin-left: 0;
   padding: 100px 30px 30px 30px;
   border: 5px solid #6A359C;
 }
-.mood-text{
+
+.mood-text {
   position: absolute;
   top: 20%;
   left: 10%;
 }
 
-.user-input{
+.user-input {
   width: 30%;
   position: absolute;
   top: 65%;
@@ -30,16 +86,16 @@ body{
   display: flex;
   flex-direction: column;
 }
-.daily-head{
+
+.daily-head {
   position: absolute;
   top: 52%;
   left: 45%;
 }
 
-.user-buttons{
+.user-buttons {
   font-family: inherit;
   background-color: #6A359C;
-
   color: white;
   margin-top: 0;
   border-color: #6A359C;
@@ -48,32 +104,38 @@ body{
   margin-right: 20px;
   cursor: pointer;
 }
-.input{
+
+.input {
   margin-bottom: 20px;
 }
-.buttons-div{
+
+.buttons-div {
   margin-left: 63%;
   margin-top: 0;
 }
-.mood-img{
+
+.mood-img {
   position: absolute;
   height: 30%;
   width: 30%;
   left: 70%;
   top: 10%;
 }
-.weekly-log{
+
+.weekly-log {
   margin-top: 5%;
   margin-left: 0;
   padding: 50px 30px 30px 30px;
   border: 5px solid #6A359C;
 }
-.weekly-head{
+
+.weekly-head {
   position: absolute;
-  top: 138%;
+  top: 148%;
   left: 40%;
 }
-#myChart2{
+
+#myChart2 {
   margin-top: 6%;
   margin-left: 15%;
 }

@@ -1,0 +1,205 @@
+body {
+  font-family: 'Comfortaa';
+  background-color: black;
+  color: white;
+}
+
+.btn.dropdown-toggle {
+  width: 150px;
+  text-align: left;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+
+label {
+  padding-top: 5px;
+}
+
+.form-label {
+  padding-left: 0px !important;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+}
+
+.down {
+  padding: 15px 15px 0 15px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-success {
+  background-color: #6A359C !important;
+}
+
+.btn-success:hover {
+  background-color: #6A359C !important;
+}
+
+img.track {
+  border: 1px solid #6A359C;
+}
+
+.playlist-head {
+  font-family: Comfortaa;
+  background-color: #6A359C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  letter-spacing: 4px;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.player-container {
+  position: absolute;
+  left: 73%;
+  top: 30%;
+  height: 400px;
+  width: 325px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #f94c57;
+}
+
+#thumbnail {
+  position: absolute;
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  top: -10%;
+  transition: 1s;
+  z-index: 3;
+}
+
+.box {
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(145, 145, 145), rgb(220, 220, 220));
+  z-index: 4;
+  bottom: -10%;
+  display: grid;
+  grid-template-colums: 35px 255px 35px;
+  grid-template-rows: 85px 25px 25px;
+  grid-template-areas:
+    "one two two three"
+    "four four four four"
+    "five five five five";
+  column-gap: 10px;
+}
+
+.play-pause {
+  grid-area: one;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa-pause-circle {
+  filter: invert(1);
+  cursor: pointer;
+  display: none;
+}
+
+#play,
+#prev-track,
+#next-track {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.track-info {
+  grid-area: two;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5%;
+  /* border: 1px solid red; */
+}
+
+#track-artist {
+  color: #f94c57;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-shadow: 0 0 15px white;
+}
+
+#track-title {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+.next-prev {
+  grid-area: three;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+
+.progress-bar {
+  grid-area: four;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+#progressBar {
+  appearance: none;
+  height: 5px;
+  background: white;
+  width: 57.5%;
+  outline: none;
+  border-radius: 30px;
+}
+
+#progressBar::-webkit-slider-thumb {
+  appearance: none;
+  height: 11px;
+  width: 11px;
+  outline: none;
+  background: #f94c57;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.track-time {
+  grid-area: five;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+
+#currentTime {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+#durationTime {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #f94c57;
+  text-shadow: 0 0 15px white;
+}
