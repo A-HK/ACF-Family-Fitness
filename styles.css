@@ -52,6 +52,19 @@ body {
   text-decoration: none;
   color: white;
 }
+.b3 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  cursor: pointer;
+  background-color: #6A359C;
+  padding: 15px;
+  font-size: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
 
 .music-link {
   text-decoration: none;
