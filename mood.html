@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="workout.html" rel="html">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+      <h1 class="heading">FitFam's MOOD TRACKER</h1>
+    <p class="mood-text">Don't let your emotions control you. <br /><br />Take advantage of our mood tracker and express how you feel. </p>
+    <img src="assetscf.svg" alt="mood" class="mood-img"/>
+  <div class="daily-log">
+    <div class="graph">
+      <h2 class="daily-head">DAILY LOG</h2>
+      <h6>How are you feeling today?</h6>
+      <div style="height:50%; width:50%">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="user-input">
+        <label class="input label" for="votes">Votes:</label>
+        <input class="input field" name="votes" id="votes" type="number" >
+        <label class="input label" for="category">Add a Category:</label>
+        <input class="input field" name="category" id="category" type="text" >
+        <p>OR </p>
+        <label class="input label" for="vote">Existing Category Name:</label>
+        <input class="input field" type="text" name="vote" id="vote">
+      </div>
+      <div class="buttons-div">
+        <button onclick="addData(myChart)" class="user-buttons">Add Data</button>
+        <button onclick="removeData(myChart)" class="user-buttons">Remove Data</button>
+        <button onclick="myVote(myChart)" class="user-buttons">My Vote</button>
+      </div>
+
+    </div>
+
+  <script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Frustration', 'Anger', 'Worry', 'Tranquility', 'Satisfaction', 'Happiness'],
+        datasets: [{
+            label: '# of Votes Daily',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+function addData(chart) {
+    chart.data.labels.push(document.getElementById('category').value);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(document.getElementById('votes').value * 1);
+    });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
+
+function myVote(chart){
+  let voteIndex = chart.data.labels.indexOf(document.getElementById('vote').value);
+  chart.data.datasets[0].data[voteIndex] +=1;
+  chart.update();
+}
+</script>
+</div>
+<div class="weekly-log">
+  <h2 class="weekly-head">WEEKLY HAPPINESS INDEX</h2>
+  <div style="height:40%; width:90%">
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('myChart2').getContext('2d');
+var myChart2 = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Week1', 'Week2', 'Week3', 'Week4'],
+        datasets: [{
+            label: '# of Votes each Week',
+            data: [12, 19, 3, 5],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+</div>
+
+<a href="workout.html"><button class="work" type="button">Start Workout</button></a>
+</body>
+</html>
