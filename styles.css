@@ -1,0 +1,99 @@
+body{
+  font-family: 'Comfortaa';
+    background-color: black;
+    color: white;
+}
+.heading{
+  margin-left: 35%;
+  margin-top: 2%;
+  color: #6A359C;
+  font-weight: 900;
+  font-size: 40px;
+}
+.graph{
+  margin-top: 13%;
+  margin-left: 0;
+  padding: 100px 30px 30px 30px;
+  border: 5px solid #6A359C;
+}
+.mood-text{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.user-input{
+  width: 30%;
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.daily-head{
+  position: absolute;
+  top: 52%;
+  left: 45%;
+}
+
+.user-buttons{
+  font-family: inherit;
+  background-color: #6A359C;
+
+  color: white;
+  margin-top: 0;
+  border-color: #6A359C;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.input{
+  margin-bottom: 20px;
+}
+.buttons-div{
+  margin-left: 63%;
+  margin-top: 0;
+}
+.mood-img{
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  left: 70%;
+  top: 10%;
+}
+.weekly-log{
+  margin-top: 2%;
+  margin-left: 0;
+  padding: 50px 30px 30px 30px;
+  border: 5px solid #6A359C;
+}
+.weekly-head{
+  position: absolute;
+  top: 145%;
+  left: 40%;
+}
+#myChart2{
+  margin-top: 6%;
+  margin-left: 15%;
+}
+.work{
+  position: absolute;
+  color:purple;
+  font-family: 'Comfortaa';
+  font-size: 20px;
+  background-color: transparent;
+  border-color: #6A359C;
+  border-radius: 20%;
+  border-style: solid;
+  border-width: 2px;
+  top:240%;
+  left:46%;
+  width:100px;
+  margin-bottom: 10px;
+}
+.work:hover{
+  background-color: white;
+  transition: 0.1s;
+  cursor:pointer;
+}
