@@ -22,3 +22,6 @@ The lifting_weights_posture.py is a program to keep track of reps.
 To run the program, follow the given steps:
   1. Type python3 lifting_weights_posture.py in your terminal and run it.
   2. Observe the increments in the counter on the top left if you are working the left arm, else observe the top right side.
+
+Demo:
+![Demonstration](demo_vids/demo_workout.gif)
